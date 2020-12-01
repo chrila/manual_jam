@@ -7,4 +7,8 @@
   <strong>email:</strong>
   <%= @user.email %>
 </p>
+
+<h2>My stories</h2>
+<%= render 'shared/story_grid', stories: @stories %>
+
 <%= link_to 'Back', root_path %>

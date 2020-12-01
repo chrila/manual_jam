@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
+    @stories = Story.where(user_id: @user.id)
   end
 
   private
