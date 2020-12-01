@@ -1,0 +1,15 @@
+<h1>Login</h1>
+<%= form_with(model: @user, url: sessions_path, local: true) do |f| %>
+  <div class="control-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, auto_focus: true, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <br>
+  <div class="control-group">
+    <%= f.submit 'Sign in', class: "btn btn-primary" %>
+  </div>
+<% end %>
